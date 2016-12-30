@@ -12,12 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        let width = AspectScreen.partOfScreen(part: 0.5, type: .width)
+        let height = AspectScreen.partOfScreen(part: 0.5, type: .height)
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        view.backgroundColor = UIColor.green
+        
+        self.view.addSubview(view)
     }
 
 
