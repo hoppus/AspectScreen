@@ -6,7 +6,7 @@
 //  Copyright © 2016 eugeny. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
 
 class AspectScreen {
@@ -17,6 +17,8 @@ class AspectScreen {
     }
     
     static func partOfScreen(part : CGFloat, type : heightOrWidth) -> CGFloat {
+        
+        if part <= 0 {return 0}
         
         let screenSize: CGRect = UIScreen.main.bounds
         
@@ -29,6 +31,8 @@ class AspectScreen {
             result = screenSize.width * part
         }
         
+        result = round(result)
+    
         return result
     }
     

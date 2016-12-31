@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let width = AspectScreen.partOfScreen(part: 0.5, type: .width)
-        let height = AspectScreen.partOfScreen(part: 0.5, type: .height)
+        let width = AspectScreen.partOfScreen(part: 0.3, type: .width)
+        let height = AspectScreen.partOfScreen(part: 0.3, type: .height)
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
         view.backgroundColor = UIColor.green
