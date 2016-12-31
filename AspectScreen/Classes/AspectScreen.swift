@@ -9,14 +9,14 @@
 
 import UIKit
 
-class AspectScreen {
+public class AspectScreen {
     
-    enum heightOrWidth {
+    public enum heightOrWidth {
         case height
         case width
     }
     
-    static func partOfScreen(part : CGFloat, type : heightOrWidth) -> CGFloat {
+    public static func partOfScreen(part : CGFloat, type : heightOrWidth) -> CGFloat {
         
         if part <= 0 {return 0}
         
